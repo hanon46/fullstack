@@ -1,0 +1,25 @@
+title new note sequence
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note {note: "ay"}
+server-->browser: URL Redirect
+
+note over browser:
+browser does a GET request to the notes page after being redirected 
+end note over
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+server-->browser: HTML-code
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server-->browser: main.css
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+server-->browser: main.js
+
+note over browser:
+browser executes main.js which requests JSON data
+end note over
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server-->browser: [{ content: "something", date: "2023-01-02" }, ...]
+
+note over browser:
+browser executes the event handler that displays the notes
+end note over 

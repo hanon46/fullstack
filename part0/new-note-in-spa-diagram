@@ -1,0 +1,4 @@
+title New note in Single page app diagram
+
+browser -> server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa {"content":"something", "date":"2023-01-03T13:31:24.991Z"}
+server --> browser: 201 Created

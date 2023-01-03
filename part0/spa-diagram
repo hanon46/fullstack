@@ -1,0 +1,29 @@
+title Single page app diagram
+
+browser -> server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+server --> browser: HTML code
+
+note over browser:
+HTML code calls CSS file
+end note over
+
+browser -> server: HTTP GET /exampleapp/main.css
+server --> browser: main.css
+
+note over browser:
+HTML code calls spa.js
+end note over
+
+browser -> server: HTTP GET /exampleapp/spa.js
+server --> browser: spa.js
+
+note over browser:
+browser runs spa.js which requests JSON file from the server 
+end note over 
+
+browser -> server: HTTP GET /exampleapp/data.json
+server --> browser: [ { content: "something", date: "2023-01-02" }, ...]
+
+note over browser:
+browser executes the event handler that displays the notes
+end note over
