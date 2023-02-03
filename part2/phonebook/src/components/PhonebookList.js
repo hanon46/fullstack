@@ -9,6 +9,7 @@ const PhonebookList = (props) =>
                             <tr key={person.id}>
                                 <td>{person.name}</td>
                                 <td>{person.number}</td>
+                                <td><button onClick={() => props.handleDelete(person.id)}>delete</button></td>
                             </tr>
                         )
                     }

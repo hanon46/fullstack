@@ -1,4 +1,5 @@
-title new note sequence
+title New note diagram
+
 browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note {note: "ay"}
 server-->browser: URL Redirect
 
