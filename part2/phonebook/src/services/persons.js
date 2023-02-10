@@ -9,6 +9,7 @@ const create = newPerson => axios.post(baseUrl, newPerson).then(response => resp
 const deletePerson = id => axios.delete(`${baseUrl}/${id}`).then(response => response.data)
 
 const update = (id, newPerson) => axios.put(`${baseUrl}/${id}`, newPerson).then(response => response.data)
+
 export default {
     getAll,
     create,
