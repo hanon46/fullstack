@@ -28,7 +28,7 @@ const App = () => {
           setPersons(persons.concat(returnedPerson))
           setNotification(`Added ${returnedPerson.name}`)
         }
-          )
+        )
 
     }
     else {
